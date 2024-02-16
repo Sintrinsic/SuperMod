@@ -1,4 +1,4 @@
-package com.tigtrinsic.superplugin;
+package com.tigtrinsic.supermod;
 
 import org.bukkit.FluidCollisionMode;
 import org.bukkit.Location;
@@ -15,10 +15,8 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.util.RayTraceResult;
 import org.bukkit.util.Vector;
-import org.checkerframework.common.reflection.qual.NewInstance;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class PlayerClickListener implements Listener {
 

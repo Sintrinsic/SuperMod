@@ -1,17 +1,22 @@
-package com.tigtrinsic.superplugin;
+package com.tigtrinsic.supermod;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class SuperPlugin extends JavaPlugin {
+public class SuperMod extends JavaPlugin {
 
     @Override
     public void onEnable() {
         // Plugin startup logic
         getLogger().info("YourPlugin has been enabled!");
+
+        // Create an instance of ParkourGame
+        ParkourGame parkourGame = new ParkourGame(getServer().getWorlds().getFirst()); // Change this to the world you want
+
+        // Create a line of blocks
+        parkourGame.createLineOfBlocks(0, 64, 0, 1000); // Change these values as needed
+
         // Register the event listener
         getServer().getPluginManager().registerEvents(new PlayerClickListener(), this);
-
-        // Here you can register commands, events, etc.
     }
 
     @Override
