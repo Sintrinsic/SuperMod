@@ -11,6 +11,9 @@ public class ParkourGame {
     public ParkourGame(World world) {
         this.world = world;
         this.score = 0;
+        // This is the code use to create the initial line:
+        // Create a line of blocks
+        // parkourGame.createLineOfBlocks(0, 64, 0, 1000); // Change these values as needed
     }
 
     public void createLineOfBlocks(int startX, int startY, int startZ, int length) {
