@@ -20,10 +20,12 @@ public class Course {
     public void fillBlocks() {
         Vector currentPoint = path.getStartPoint();
         Vector newPoint;
-        while ((newPoint = path.traverseDistance(currentPoint, 1)) != null) {
+        int count = 0;
+        while ((newPoint = path.traverseDistance(currentPoint, 1)) != null && count < 10000) {
             Block block = world.getBlockAt(newPoint.getBlockX(), newPoint.getBlockY(), newPoint.getBlockZ());
             block.setType(Material.STONE);
             currentPoint = newPoint;
+            count++;
         }
     }
 }
